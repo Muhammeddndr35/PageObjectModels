@@ -26,12 +26,12 @@ public class TestClass extends BaseTest {
     @Order(2)
     public void loginPageTest() {
         loginPage = new LoginPage(driver);
-        //loginPage.mailLogin("testo@gmail.com");
-        //loginPage.passwordLogin("123");
+        loginPage.mailLogin("testo@gmail.com");
+        loginPage.passwordLogin("123");
 
-        //WebElement checkWEbElement = loginPage.errorCheck();
-        //Assertions.assertNotNull(checkWEbElement, "Error message element is not found.");
-        //Assertions.assertTrue(checkWEbElement.isDisplayed(), "Error message is not displayed.");
+        WebElement checkWEbElement = loginPage.errorCheck();
+        Assertions.assertNotNull(checkWEbElement, "Error message element is not found.");
+        Assertions.assertTrue(checkWEbElement.isDisplayed(), "Error message is not displayed.");
 
         loginPage.mailLogin("test35@gmail.com");
         loginPage.passwordLogin("123test123");
